@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const fs = require('fs');
+const { title } = require('process');
 const util = require('util');
 // const {readFromFile, writeToFile, readAndAppend} = require('../../helpers/fsUtils');
 
@@ -28,6 +29,14 @@ router.get('/notes',(req,res) => {
     })
 } );
 
-router.post('/notes')
+router.post('/notes', (req,res) => {
+    const {title, text} = req.body;
+    const note = {
+        title: title,
+        text: text
+    }
+    readAndAppend(note, 'db/db.json');
+    res.json(`New note added`);
+});
 
 module.exports = router;

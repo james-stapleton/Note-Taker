@@ -1,6 +1,14 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "Post new note 1",
+        "text": "This is the text of the first new post using the route"
+    },
+    {
+        "title": "Post new note 2",
+        "text": "Second post"
     }
 ]
